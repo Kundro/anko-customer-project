@@ -23,13 +23,13 @@ jobs:
           6.0.x
         
     - name: Restore dependencies
-      run: dotnet restore Customer/Customer.sln
+      run: dotnet restore Customer.sln
       
     - name: Build
-      run: dotnet build Customer/Customer.sln --no-restore
+      run: dotnet build --no-restore Customer.sln
       
     - name: Test
-      run: dotnet test Customer/Customer.sln --configuration Debug --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage
+      run: dotnet test Customer.sln --configuration Debug --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./coverage
 
     - name: Codecov upload 
       uses: codecov/codecov-action@v3
