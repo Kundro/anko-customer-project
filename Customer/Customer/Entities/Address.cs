@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CustomerLibrary.Entities
+﻿namespace CustomerLibrary.Entities
 {
     public enum AddressType
     {
@@ -11,16 +7,23 @@ namespace CustomerLibrary.Entities
     }
     public class Address
     {
-        public Address(string addressLine, string addressLine2, AddressType addressType)
+        public Address(string addressLine, string addressLine2, AddressType addressType, string city, string postalCode, string state, string country)
         {
             AddressLine = addressLine;
             AddressLine2 = addressLine2;
-            AddressType = addressType;     
+            AddressType = addressType;
+            City = city;
+            PostalCode = postalCode;
+            State = state;
+            Country = country;
         }
 
         public string AddressLine { get; set; }
         public string AddressLine2 { get; set; }
         public AddressType AddressType { get; set; }
-        
+        public string City { get; set; }
+        public string PostalCode { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
     }
 }
