@@ -2,6 +2,8 @@
   <Settings>
     <AutoEnable>True</AutoEnable>
     <CurrentEngineMode>Run all tests automatically [Global]</CurrentEngineMode>
+    <MetricsTreeShowExcludedMetrics>True</MetricsTreeShowExcludedMetrics>
+    <MetricsTreeShowTestProjects>True</MetricsTreeShowTestProjects>
     <TestsWindowMenuOptions>
       <VerticalSplitMenuOption>false</VerticalSplitMenuOption>
       <ShowPassingTestsMenuOption>true</ShowPassingTestsMenuOption>
@@ -9,6 +11,29 @@
       <ShowUnexecutedTestsMenuOption>true</ShowUnexecutedTestsMenuOption>
       <ShowIgnoredTestsMenuOption>true</ShowIgnoredTestsMenuOption>
     </TestsWindowMenuOptions>
+    <TestsWindowMenuVisibility>
+      <RunSelectedTestsMenuOption>true</RunSelectedTestsMenuOption>
+      <DebugSelectedTestsMenuOption>true</DebugSelectedTestsMenuOption>
+      <RunAllTestsMenuOption>true</RunAllTestsMenuOption>
+      <RunVisibleTestsMenuOption>true</RunVisibleTestsMenuOption>
+      <StopPendingTestsMenuOption>true</StopPendingTestsMenuOption>
+      <ResetMenuOption>true</ResetMenuOption>
+      <EngineModesDropDownMenuOption>true</EngineModesDropDownMenuOption>
+      <IgnoreTestMenuOption>false</IgnoreTestMenuOption>
+      <PinTestsMenuOption>true</PinTestsMenuOption>
+      <UnpinAllTestsMenuOption>true</UnpinAllTestsMenuOption>
+      <HideSelectedWarningsMenuOption>true</HideSelectedWarningsMenuOption>
+      <ShowAllWarningsMenuOption>true</ShowAllWarningsMenuOption>
+      <VerticalSplitMenuOption>true</VerticalSplitMenuOption>
+      <CollapseAllMenuOption>true</CollapseAllMenuOption>
+      <ShowPassingTestsMenuOption>true</ShowPassingTestsMenuOption>
+      <ShowFailingTestsMenuOption>true</ShowFailingTestsMenuOption>
+      <ShowUnexecutedTestsMenuOption>true</ShowUnexecutedTestsMenuOption>
+      <ShowIgnoredTestsMenuOption>true</ShowIgnoredTestsMenuOption>
+      <CombinedExportTestsWindowPlaceHolderMenuOption>true</CombinedExportTestsWindowPlaceHolderMenuOption>
+      <GroupByDropDownMenuOption>true</GroupByDropDownMenuOption>
+      <SearchMenuOption>true</SearchMenuOption>
+    </TestsWindowMenuVisibility>
     <TestsWindowSplitterDistance>71.3888854980469%</TestsWindowSplitterDistance>
   </Settings>
 </SolutionConfiguration>
