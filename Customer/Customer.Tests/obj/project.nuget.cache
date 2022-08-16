@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rG+T1tQH9byxJHqJanWd5ifUY9FZuog7NQwj7Lus2GG2meH3UJa2/daIB6XOWIOVzUvTcAmeWVu8ErpSLDyNXQ==",
+  "dgSpecHash": "0gEEM3x5m3qMJRbfn+yZcyU98nKO+Rg/aUYpfGaDdBm/EB+hsVKg88oG6VpW+Kw77GxSnC04iXYYLD5975YGyQ==",
   "success": true,
-  "projectFilePath": "D:\\ANKO\\anko-customer-project\\Customer\\Customer.Tests\\Customer.Tests.csproj",
+  "projectFilePath": "D:\\ANKO\\anko-customer-project\\Customer\\Customer.Tests\\CustomerLibrary.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

@@ -1,0 +1,5 @@
+D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.csproj.AssemblyReference.cache
+D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.AssemblyInfoInputs.cache
+D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.AssemblyInfo.cs
+D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.csproj.CoreCompileInputs.cache

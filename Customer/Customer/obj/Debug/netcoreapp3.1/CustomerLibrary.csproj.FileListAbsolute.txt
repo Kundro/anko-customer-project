@@ -1,0 +1,10 @@
+D:\ANKO\anko-customer-project\Customer\Customer\obj\Debug\netcoreapp3.1\CustomerLibrary.csproj.AssemblyReference.cache
+D:\ANKO\anko-customer-project\Customer\Customer\obj\Debug\netcoreapp3.1\CustomerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\ANKO\anko-customer-project\Customer\Customer\obj\Debug\netcoreapp3.1\CustomerLibrary.AssemblyInfoInputs.cache
+D:\ANKO\anko-customer-project\Customer\Customer\obj\Debug\netcoreapp3.1\CustomerLibrary.AssemblyInfo.cs
+D:\ANKO\anko-customer-project\Customer\Customer\obj\Debug\netcoreapp3.1\CustomerLibrary.csproj.CoreCompileInputs.cache
+D:\ANKO\anko-customer-project\Customer\Customer\bin\Debug\netcoreapp3.1\CustomerLibrary.deps.json
+D:\ANKO\anko-customer-project\Customer\Customer\bin\Debug\netcoreapp3.1\CustomerLibrary.dll
+D:\ANKO\anko-customer-project\Customer\Customer\bin\Debug\netcoreapp3.1\CustomerLibrary.pdb
+D:\ANKO\anko-customer-project\Customer\Customer\obj\Debug\netcoreapp3.1\CustomerLibrary.dll
+D:\ANKO\anko-customer-project\Customer\Customer\obj\Debug\netcoreapp3.1\CustomerLibrary.pdb

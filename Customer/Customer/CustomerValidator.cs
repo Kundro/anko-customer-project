@@ -1,8 +1,9 @@
 ﻿using System;
 
-namespace Customer
+namespace CustomerLibrary
 {
-    public class Class1
+    public class CustomerValidator
     {
+
     }
 }

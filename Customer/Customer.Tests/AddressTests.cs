@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-namespace Customer.Tests
+namespace CustomerLibrary.Tests
 {
-    public class UnitTest1
+    public class AddressTests
     {
         [Fact]
         public void Test1()

@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ANKO\\anko-customer-project\\Customer\\Customer\\Customer.csproj",
-      "projectName": "Customer",
-      "projectPath": "D:\\ANKO\\anko-customer-project\\Customer\\Customer\\Customer.csproj",
+      "projectUniqueName": "D:\\ANKO\\anko-customer-project\\Customer\\Customer\\CustomerLibrary.csproj",
+      "projectName": "CustomerLibrary",
+      "projectPath": "D:\\ANKO\\anko-customer-project\\Customer\\Customer\\CustomerLibrary.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
       "outputPath": "D:\\ANKO\\anko-customer-project\\Customer\\Customer\\obj\\",
       "projectStyle": "PackageReference",

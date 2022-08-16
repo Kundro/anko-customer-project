@@ -1,12 +1,12 @@
 using System;
 using Xunit;
 
-namespace Customer.Tests
+namespace CustomerLibrary.Tests
 {
-    public class UnitTest1
+    public class CustomerValidatorTests
     {
         [Fact]
-        public void Test1()
+        public void Test4()
         {
 
         }

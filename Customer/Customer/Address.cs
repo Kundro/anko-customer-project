@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Customer
+namespace CustomerLibrary
 {
-    internal class Address
+    public class Address
     {
+
     }
 }
