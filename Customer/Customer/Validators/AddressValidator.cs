@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CustomerLibrary
+namespace CustomerLibrary.Validators
 {
     public class AddressValidator
     {
