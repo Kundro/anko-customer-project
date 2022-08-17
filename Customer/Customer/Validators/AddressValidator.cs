@@ -1,64 +1,34 @@
-﻿using CustomerLibrary.Entities;
-using System;
-using System.Collections.Generic;
+﻿using FluentValidation;
+using CustomerLibrary.Entities;
 using System.Linq;
 
 namespace CustomerLibrary.Validators
 {
-    public class AddressValidator
+    public class AddressValidator : AbstractValidator<Address>
     {
         private const int MaxAddressLength = 100;
         private const int MaxCityLength = 50;
         private const int MaxPostalCodeLength = 6;
         private const int MaxStateLength = 20;
-
-
-        public static List<string> Validate(Address address)
+        public AddressValidator()
         {
-            var errors = new List<string>();
-
-            if (address.AddressLine.Length > MaxAddressLength)
-            {
-                errors.Add(ConstMessages.AddressLineLong);
-            }
-            if (string.IsNullOrWhiteSpace(address.AddressLine))
-            {
-                errors.Add(ConstMessages.AddressLineReq);
-            }
-            if (address.AddressLine2?.Length > MaxAddressLength)
-            {
-                errors.Add(ConstMessages.AddressLine2Long);
-            }
-            if (address.City.Length > MaxCityLength)
-            {
-                errors.Add(ConstMessages.CityLong);
-            }
-            if(address.PostalCode.Length > MaxPostalCodeLength)
-            {
-                errors.Add(ConstMessages.PostalCodeLong);
-            }
-            if (string.IsNullOrWhiteSpace(address.City))
-            {
-                errors.Add(ConstMessages.CityReq);
-            }
-            if (string.IsNullOrWhiteSpace(address.PostalCode))
-            {
-                errors.Add(ConstMessages.PostalReq);
-            }
-            if (string.IsNullOrWhiteSpace(address.State))
-            {
-                errors.Add(ConstMessages.StateReq);
-            }
-            if (address.State.Length > MaxStateLength)
-            {
-                errors.Add(ConstMessages.StateLong);
-            }
-            if (!ConstMessages.Countries.Contains(address.Country, StringComparer.OrdinalIgnoreCase))
-            {
-                errors.Add(ConstMessages.WrongCountry);
-            }
-
-            return errors;
+            RuleFor(address => address.AddressLine)
+                .NotEmpty().WithMessage(ConstMessages.AddressLineReq)
+                .MaximumLength(MaxAddressLength).WithMessage(ConstMessages.AddressLineLong);
+            RuleFor(address => address.AddressLine2)
+                .MaximumLength(MaxAddressLength).WithMessage(ConstMessages.AddressLine2Long);
+            RuleFor(address => address.City)
+                .MaximumLength(MaxCityLength).WithMessage(ConstMessages.CityLong)
+                .NotEmpty().WithMessage(ConstMessages.CityReq);
+            RuleFor(address => address.PostalCode)
+                .MaximumLength(MaxPostalCodeLength).WithMessage(ConstMessages.PostalCodeLong)
+                .NotEmpty().WithMessage(ConstMessages.PostalReq);
+            RuleFor(address => address.State)
+                .MaximumLength(MaxStateLength).WithMessage(ConstMessages.StateLong)
+                .NotEmpty().WithMessage(ConstMessages.StateReq);
+            RuleFor(address => address.Country)
+                .NotEmpty().WithMessage(ConstMessages.WrongCountry)
+                .Must(address => ConstMessages.Countries.Contains(address)).WithMessage(ConstMessages.WrongCountry);
         }
     }
 }
