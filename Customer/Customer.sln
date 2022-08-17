@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerLibrary", "Customer\CustomerLibrary.csproj", "{29202E2E-5582-4C57-8FA0-E44F9D2849D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerLibrary", "Customer\CustomerLibrary.csproj", "{29202E2E-5582-4C57-8FA0-E44F9D2849D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerLibrary.Tests", "Customer.Tests\CustomerLibrary.Tests.csproj", "{25E543C2-7151-4C4E-AC07-8232B550A83F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerLibrary.Tests", "Customer.Tests\CustomerLibrary.Tests.csproj", "{25E543C2-7151-4C4E-AC07-8232B550A83F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{29202E2E-5582-4C57-8FA0-E44F9D2849D7} = {29202E2E-5582-4C57-8FA0-E44F9D2849D7}
 	EndProjectSection

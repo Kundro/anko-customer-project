@@ -99,3 +99,5 @@ D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\Cu
 D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.dll
 D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.pdb
 D:\ANKO\anko-customer-project\Customer\Customer.Tests\obj\Debug\netcoreapp3.1\CustomerLibrary.Tests.genruntimeconfig.cache
+D:\ANKO\anko-customer-project\Customer\Customer.Tests\bin\Debug\netcoreapp3.1\Bogus.dll
+D:\ANKO\anko-customer-project\Customer\Customer.Tests\bin\Debug\netcoreapp3.1\FluentValidation.dll

@@ -6,44 +6,14 @@ namespace CustomerLibrary.Validators
 {
     public class CustomerValidator : AbstractValidator<Customer>
     {
-        
-
-        /*
-        public static List<string> Validate(Customer customer)
+        public CustomerValidator()
         {
-            List<string> errors = new List<string>();
-
-            if (customer.FirstName?.Length > 50)
-            {
-                errors.Add(ConstMessages.FirstNameLong);
-            }
-            if (customer.LastName.Length > 50)
-            {
-                errors.Add(ConstMessages.LastNameLong);
-            }
-            if (string.IsNullOrWhiteSpace(customer.LastName))
-            {
-                errors.Add(ConstMessages.LastNameReq);
-            }
-            if(customer.Addresses.Count == 0)
-            {
-                errors.Add(ConstMessages.AddressReq);
-            }
-            if (!Regex.IsMatch(customer.PhoneNumber, @"^\+[1-9]\d{13}$"))
-            {
-                errors.Add(ConstMessages.WrongPhoneNumber);
-            }
-            if (!Regex.IsMatch(customer.Email, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"))
-            {
-                errors.Add(ConstMessages.WrongEmail);
-            }
-            if(customer.Notes.Count == 0)
-            {
-                errors.Add(ConstMessages.NotesReq);
-            }
-
-            return errors;
+            RuleFor(customer => customer.FirstName).MaximumLength(50).WithMessage(ConstMessages.FirstNameLong);
+            RuleFor(customer => customer.LastName).MaximumLength(50).WithMessage(ConstMessages.LastNameLong).NotEmpty().WithMessage(ConstMessages.LastNameReq);
+            RuleFor(customer => customer.Addresses).NotEmpty().WithMessage(ConstMessages.AddressReq);
+            RuleFor(customer => customer.Email).Matches(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$").WithMessage(ConstMessages.WrongEmail);
+            RuleFor(customer => customer.PhoneNumber).Matches(@"^\+[1-9]\d{13}$").WithMessage(ConstMessages.WrongPhoneNumber);
+            RuleFor(customer => customer.Notes).NotEmpty().WithMessage(ConstMessages.NotesReq);
         }
-        */
     }
 }
