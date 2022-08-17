@@ -5,6 +5,8 @@ namespace CustomerLibrary.Entities
 {
     public class Customer : Person
     {
+        public override string FirstName { get => base.FirstName; set => base.FirstName = value; }
+        public override string LastName { get => base.LastName; set => base.LastName = value; }
         public List<Address> Addresses { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }

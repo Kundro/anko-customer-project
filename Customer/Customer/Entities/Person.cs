@@ -6,12 +6,12 @@ namespace CustomerLibrary.Entities
 {
     public abstract class Person
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
         public Person(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
         }
+        public virtual string FirstName { get; set; }
+        public virtual string LastName { get; set; }
     }
 }
