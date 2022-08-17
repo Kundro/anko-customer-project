@@ -6,45 +6,37 @@ namespace CustomerLibrary.Validators
 {
     public class CustomerValidator
     {
-        const string FIRST_NAME_LONG = "First name is too long";
-        const string LAST_NAME_LONG = "Last name is too long";
-        const string LAST_NAME_REQ = "Last name required";
-        const string ADDRESS_REQ = "Required at least 1 address";
-        const string WRONG_PHONE_NUMBER = "Incorrect phone number format";
-        const string WRONG_EMAIL = "Incorrect email address format";
-        const string NOTES_REQ = "Required at least 1 note";
-
         public static List<string> Validate(Customer customer)
         {
             List<string> errors = new List<string>();
 
-            if (customer.FirstName.Length > 50)
+            if (customer.FirstName?.Length > 50)
             {
-                errors.Add(FIRST_NAME_LONG);
+                errors.Add(ConstMessages.FirstNameLong);
             }
             if (customer.LastName.Length > 50)
             {
-                errors.Add(LAST_NAME_LONG);
+                errors.Add(ConstMessages.LastNameLong);
             }
             if (string.IsNullOrWhiteSpace(customer.LastName))
             {
-                errors.Add(LAST_NAME_REQ);
+                errors.Add(ConstMessages.LastNameReq);
             }
             if(customer.Addresses.Count == 0)
             {
-                errors.Add(ADDRESS_REQ);
+                errors.Add(ConstMessages.AddressReq);
             }
             if (!Regex.IsMatch(customer.PhoneNumber, @"^\+[1-9]\d{13}$"))
             {
-                errors.Add(WRONG_PHONE_NUMBER);
+                errors.Add(ConstMessages.WrongPhoneNumber);
             }
             if (!Regex.IsMatch(customer.Email, @"^[a-zA-Z0-9_.+-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"))
             {
-                errors.Add(WRONG_EMAIL);
+                errors.Add(ConstMessages.WrongEmail);
             }
             if(customer.Notes.Count == 0)
             {
-                errors.Add(NOTES_REQ);
+                errors.Add(ConstMessages.NotesReq);
             }
 
             return errors;

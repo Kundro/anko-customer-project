@@ -1,4 +1,5 @@
 ﻿using CustomerLibrary.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,71 +7,55 @@ namespace CustomerLibrary.Validators
 {
     public class AddressValidator
     {
-        static readonly string[] COUNTRIES =
-        {
-            "USA",
-            "united states",
-            "United States",
-            "United States of America",
-            "Canada",
-            "canada"
-        };
-        const string ADDRESS_LINE_LONG = "Address line is too long";
-        const string ADDRESS_LINE_2_LONG = "Address line 2 is too long";
-        const string ADDRESS_LINE_REQ = "Address line required";
-        const string CITY_LONG = "City name is too long";
-        const string CITY_REQ = "City name required";
-        const string POSTAL_CODE_LONG = "Postal code is too long";
-        const string POSTAL_REQ = "Postal code required";
-        const string STATE_REQ = "State name required";
-        const string STATE_LONG = "State name is too long";
-        const string WRONG_COUNTRY = "Wrong country name";
-
+        private const int MaxAddressLength = 100;
+        private const int MaxCityLength = 50;
+        private const int MaxPostalCodeLength = 6;
+        private const int MaxStateLength = 20;
 
 
         public static List<string> Validate(Address address)
         {
             var errors = new List<string>();
 
-            if (address.AddressLine.Length > 100)
+            if (address.AddressLine.Length > MaxAddressLength)
             {
-                errors.Add(ADDRESS_LINE_LONG);
+                errors.Add(ConstMessages.AddressLineLong);
             }
             if (string.IsNullOrWhiteSpace(address.AddressLine))
             {
-                errors.Add(ADDRESS_LINE_REQ);
+                errors.Add(ConstMessages.AddressLineReq);
             }
-            if (address.AddressLine2.Length > 100)
+            if (address.AddressLine2?.Length > MaxAddressLength)
             {
-                errors.Add(ADDRESS_LINE_2_LONG);
+                errors.Add(ConstMessages.AddressLine2Long);
             }
-            if (address.City.Length > 50)
+            if (address.City.Length > MaxCityLength)
             {
-                errors.Add(CITY_LONG);
+                errors.Add(ConstMessages.CityLong);
             }
-            if(address.PostalCode.Length > 6)
+            if(address.PostalCode.Length > MaxPostalCodeLength)
             {
-                errors.Add(POSTAL_CODE_LONG);
+                errors.Add(ConstMessages.PostalCodeLong);
             }
             if (string.IsNullOrWhiteSpace(address.City))
             {
-                errors.Add(CITY_REQ);
+                errors.Add(ConstMessages.CityReq);
             }
             if (string.IsNullOrWhiteSpace(address.PostalCode))
             {
-                errors.Add(POSTAL_REQ);
+                errors.Add(ConstMessages.PostalReq);
             }
             if (string.IsNullOrWhiteSpace(address.State))
             {
-                errors.Add(STATE_REQ);
+                errors.Add(ConstMessages.StateReq);
             }
-            if (address.State.Length > 20)
+            if (address.State.Length > MaxStateLength)
             {
-                errors.Add(STATE_LONG);
+                errors.Add(ConstMessages.StateLong);
             }
-            if (!COUNTRIES.Contains(address.Country))
+            if (!ConstMessages.Countries.Contains(address.Country, StringComparer.OrdinalIgnoreCase))
             {
-                errors.Add(WRONG_COUNTRY);
+                errors.Add(ConstMessages.WrongCountry);
             }
 
             return errors;
