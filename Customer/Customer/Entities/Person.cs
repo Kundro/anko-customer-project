@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CustomerLibrary.Entities
+﻿namespace CustomerLibrary.Entities
 {
     public abstract class Person
     {
