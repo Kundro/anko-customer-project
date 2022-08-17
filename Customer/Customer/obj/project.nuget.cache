@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "R2Ij9SOs+7qapepHNDc3r/pIW2Y26Qf2sOkbRo66atiXtVrLNsMttbqgsflSUYE+AZTHmtP23joiRqpfDccpFQ==",
+  "dgSpecHash": "Pk2wxa3yMyUQDkziH+OwWcpazqMUmmtqKBJqF2Ba23qXoInkB9bRto18p5BgFygbgxLrYrGrD0UmYdqdRU3CVQ==",
   "success": true,
   "projectFilePath": "D:\\ANKO\\anko-customer-project\\Customer\\Customer\\CustomerLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512"
+  ],
   "logs": []
 }

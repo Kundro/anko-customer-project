@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "88xvHfWJBqV9enElRaO2/Jy2gjC4CDmZgZx3mL4YR/fAc85a9klbne0bhNMpZp0hPhz8/DVXpk7+dAk1SPUlIw==",
+  "dgSpecHash": "7YpF0esvTiKYXR4h81f5AVpAUT1Vps+huntv+EizVTevFCm6aaCrRZkLyeb3gL1K5lcbd5EaYSV+cDMBc+hatQ==",
   "success": true,
   "projectFilePath": "D:\\ANKO\\anko-customer-project\\Customer\\Customer.Tests\\CustomerLibrary.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.net.test.sdk\\17.1.0\\microsoft.net.test.sdk.17.1.0.nupkg.sha512",

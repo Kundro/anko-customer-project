@@ -1,11 +1,14 @@
-﻿using CustomerLibrary.Entities;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
+﻿using FluentValidation;
+using CustomerLibrary.Entities;
+
 
 namespace CustomerLibrary.Validators
 {
-    public class CustomerValidator
+    public class CustomerValidator : AbstractValidator<Customer>
     {
+        
+
+        /*
         public static List<string> Validate(Customer customer)
         {
             List<string> errors = new List<string>();
@@ -41,5 +44,6 @@ namespace CustomerLibrary.Validators
 
             return errors;
         }
+        */
     }
 }
