@@ -8,12 +8,10 @@ namespace CustomerLibrary.Tests
 {
     public class CustomerTests
     {
-        CustomerValidator customerValidator = new CustomerValidator();
-
         [Fact]
         public void ShouldBeAbleToCreateCustomer()
         {
-            Customer customer = new Customer("name", "surname", new List<Address>(), "+9123456789112", "mail.a@mail.ru", 0.0m, new List<string>() { "note1", "note2" });
+            Customer customer = new Customer(firstName: "name", lastName: "surname", addresses: new List<Address>(), phoneNumber: "+9123456789112", email: "mail.a@mail.ru", totalPurchasesAmount: 0.0m, notes: new List<string>() { "note1", "note2" });
             Assert.Equal("name", customer.FirstName);
             Assert.Equal("surname", customer.LastName);
             Assert.Equal("+9123456789112", customer.PhoneNumber);
@@ -26,6 +24,8 @@ namespace CustomerLibrary.Tests
         [Fact]
         public void ShouldBeCreateWrongCustomer()
         {
+            CustomerValidator customerValidator = new CustomerValidator();
+
             Customer customer = new Customer(new string('n', 51), "", null, "+142", "mailmail@ma", 0, new List<string>());
             var res = customerValidator.TestValidate(customer);
 
@@ -35,6 +35,21 @@ namespace CustomerLibrary.Tests
             res.ShouldHaveValidationErrorFor(customer => customer.Email);
             res.ShouldHaveValidationErrorFor(customer => customer.Notes);
             res.ShouldHaveValidationErrorFor(customer => customer.PhoneNumber);
+        }
+
+        [Fact]
+        public void ShouldBeAbleToCreateCustomerUsingCustomerCreateParams()
+        {
+            CustomerCreateParams customerCreateParams = new CustomerCreateParams();
+            Customer customer = new Customer(firstName: "name", lastName: "surname", customerCreateParams);
+
+            Assert.Equal(customer.FirstName, customerCreateParams.FirstName);
+            Assert.Equal(customer.LastName, customerCreateParams.LastName);
+            Assert.Equal(customer.Addresses, customerCreateParams.Addresses);
+            Assert.Equal(customer.Notes, customerCreateParams.Notes);
+            Assert.Equal(customer.TotalPurchasesAmount, customerCreateParams.TotalPurchasesAmount);
+            Assert.Equal(customer.Email, customerCreateParams.Email);
+            Assert.Equal(customer.PhoneNumber, customerCreateParams.PhoneNumber);
         }
     }
 }

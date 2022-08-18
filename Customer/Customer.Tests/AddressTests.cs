@@ -8,12 +8,10 @@ namespace CustomerLibrary.Tests
 {
     public class AddressTests
     {
-        AddressValidator addressValidator = new AddressValidator();
-
         [Fact]
         public void ShouldBeAbleToCreateAddress()
         {
-            Address address = new Address("line1", "line2", AddressType.Shipping, "Chicago", "60666", "Illinois", "USA");
+            Address address = new Address(addressLine2: "line2", addressLine: "line1", addressType: AddressType.Shipping, city: "Chicago", postalCode:  "60666", state: "Illinois", country: "USA");
             Assert.Equal("line1", address.AddressLine);
             Assert.Equal("line2", address.AddressLine2);
             Assert.Equal(AddressType.Shipping, address.AddressType);
@@ -26,14 +24,31 @@ namespace CustomerLibrary.Tests
         [Fact]
         public void ShouldBeCreateWrongAddress()
         {
-            Address address = new Address("", new string('1', 101), null, null, "1234567", new string('s',21), "Belarus");
+            AddressValidator addressValidator = new AddressValidator();
+
+            Address address = new Address(addressLine: "", addressLine2: new string('1', 101), addressType: null, city: null, postalCode: "1234567", state: new string('s',21), country: "Belarus");
             var res = addressValidator.TestValidate(address);
             res.ShouldHaveValidationErrorFor(address => address.AddressLine);
             res.ShouldHaveValidationErrorFor(address => address.AddressLine2);
-            res.ShouldHaveValidationErrorFor(address => address.State);
-            res.ShouldHaveValidationErrorFor(address => address.Country);
-            res.ShouldHaveValidationErrorFor(address => address.PostalCode);
             res.ShouldHaveValidationErrorFor(address => address.City);
+            res.ShouldHaveValidationErrorFor(address => address.State);
+            res.ShouldHaveValidationErrorFor(address => address.PostalCode);
+            res.ShouldHaveValidationErrorFor(address => address.Country);
+        }
+
+        [Fact]
+        public void ShouldBeAbleToCreateAddressUsingCreateAddressParams()
+        {
+            CreateAddressParams createAddressParams = new CreateAddressParams();
+            Address address = new Address(createAddressParams);
+
+            Assert.Equal(address.AddressLine, createAddressParams.AddressLine);
+            Assert.Equal(address.AddressLine2, createAddressParams.AddressLine2);
+            Assert.Equal(address.State, createAddressParams.State);
+            Assert.Equal(address.Country, createAddressParams.Country);
+            Assert.Equal(address.City, createAddressParams.City);
+            Assert.Equal(address.AddressType, createAddressParams.AddressType);
+            Assert.Equal(address.PostalCode, createAddressParams.PostalCode);
         }
 
         [Theory]
@@ -42,6 +57,8 @@ namespace CustomerLibrary.Tests
         [InlineData("russia")]
         public void ShouldBeCreateWrongCountryName(string country)
         {
+            AddressValidator addressValidator = new AddressValidator();
+
             Address address = new Address("Street", "6/A", AddressType.Billing, "Chicago", "60666", "Illinois", country);
 
             var res = addressValidator.TestValidate(address);

@@ -5,8 +5,20 @@ namespace CustomerLibrary.Entities
 {
     public class Customer : Person
     {
+        public Customer(string firstName, string lastName, CustomerCreateParams customerCreateParams) : base(firstName, lastName)
+        {
+            FirstName = customerCreateParams.FirstName;
+            LastName = customerCreateParams.LastName;
+            Addresses = customerCreateParams.Addresses;
+            PhoneNumber = customerCreateParams.PhoneNumber;
+            Email = customerCreateParams.Email;
+            TotalPurchasesAmount = customerCreateParams.TotalPurchasesAmount;
+            Notes = customerCreateParams.Notes;
+        }
         public Customer(string firstName, string lastName, List<Address> addresses, string phoneNumber, string email, decimal? totalPurchasesAmount, List<string> notes) : base(firstName, lastName)
         {
+            FirstName = firstName;
+            LastName = lastName;
             Addresses = addresses;
             PhoneNumber = phoneNumber;
             Email = email;
@@ -20,5 +32,16 @@ namespace CustomerLibrary.Entities
         public string Email { get; set; }
         public decimal? TotalPurchasesAmount { get; set; }
         public List<string> Notes { get; set; }
+    }
+    public class CustomerCreateParams
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public List<Address> Addresses { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public List<string> Notes { get; set; }
+        public decimal TotalPurchasesAmount { get; set; }
+
     }
 }
